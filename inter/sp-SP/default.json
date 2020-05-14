@@ -1,0 +1,51 @@
+{
+    "errors": {
+      "INSUFFICIENT_ARGS": "argumentos insuficientes, {{requiredArgs}} argumentos insuficientes {{argsCount}} encontrado.  \nuso: ``{{usage}}``",
+      "NO_END_QUOTE": "usted tiene una cotización final faltante.",
+      "ON_COOLDOWN": "¡Por favor, cálmate! ({{time}} segundos restantes)",
+      "NO_PERMS": "¡Usted Necesita los  {{perms}} para ejecutar este comando!",
+      "NO_PERMS_BOT": "¡Yo Necesito los permisos {{perms}} para ejecutar este comando!",
+      "NO_PMS": "este comando no se puede ejecutar en PMs.",
+      "INVALID_RESOLVER_TYPE": "Tipo de resolución no válido",
+      "member": {
+        "NOT_FOUND": "el miembro no fue encontrado"
+      },
+      "channel": {
+        "NOT_FOUND": "no pudo encontrar el canal"
+      },
+      "command": {
+        "NOT_FOUND": "el comando no se pudo encontrar"
+      },
+      "group": {
+        "NOT_FOUND": "el grupo de comandos no se pudo encontrar"
+      },
+      "role": {
+        "NOT_FOUND": "el puesto no se pudo encontrar"
+      },
+      "string": {
+        "NOT_STRING": "{{arg}} debe ser un string",
+        "MAX": "La longitud de la {{arg}} en el puede ser menos {{max}}",
+        "MIN": "La longitud de la {{arg}} no puede ser menos de {{min}}",
+        "ONE_OF": "{{arg}} debe ser uno de los siguientes: [`{{choices}}`]"
+      },
+      "list": {
+        "MAX": "O {{arg}} debe ser menor o igual que {{max}}",
+        "MIN": "O {{arg}} debe ser mayor o igual que {{min}}"
+      }
+    },
+    "menus": {
+      "EXIT": "escriba {{cancel}} para salir del menú.",
+      "ERRORED": "el menú ha sido cerrado:",
+      "EXITED": "has dejado el menú.",
+      "SELECTION": "Menu Seleção",
+      "ERROR": "Error desconocido",
+      "INPUT": "Introduzca el número de su elección en el chat o '{{cancel}}' para cancelar.",
+      "MORE_RESULTS": "E mais {{num}} ..."
+    },
+    "collector": {
+      "timeout": "  Tiempo de espera después de {{timeout}} s",
+      "max": "Excedido {{max}} Intentos",
+      "maxMatches": "Excedido {{maxMatches}} partidos"
+    }
+  }
+  

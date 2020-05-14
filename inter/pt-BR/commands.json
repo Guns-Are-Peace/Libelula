@@ -1,0 +1,167 @@
+{
+    "notSet": "Sem descrição disponível.",
+    "reasonNotSet": "Motivo não especificado.",
+    "whois": {
+      "title": "Informações de usuário",
+      "gamming": "Jogando",
+      "nickname": "Apelido",
+      "entry_server": "Entrou no server há: ",
+      "day_entry": "``{{days}} dias``",
+      "create_account": "Conta criada há: ",
+      "roles": "cargos [{{length}}]",
+      "permissions": "Permissões no servidor [{{length}}]",
+      "clientStatus": "Usuário logado no:",
+      "status": {
+        "online": ":online: ativo",
+        "idle": ":idle: ausente",
+        "dnd": ":dnd: não incomodar",
+        "offline": ":offline: desconectado/invisivel"
+      }
+    },
+    "server": {
+      "id": "🔰 ID do servidor",
+      "owner": "Chefe do Servidor",
+      "locale": "⚽ Região",
+      "ownerID": "ID do Dono",
+      "days": "**```{{days}} dias```**",
+      "createDate": ":date: Servidor criado em: ",
+      "createTime": "⏰ Servidor criado há",
+      "channelVoice": "🎤 Canais de Voz:",
+      "channelVoiceSize":"```{{channels}} canal(is) de voz```",
+     "channelText": "📋 Canais de texto:",
+      "channelTextSize": "```{{channels}} canal(is) de texto```",
+      "botAddDate": "📥 Bot adicionado em",
+      "botAddTime": "📥 Bot adicionado há",
+      "members": "🎎 Total de Membros",
+      "membersSize": "```{{members}} membros no servidor```",
+      "roles": "📌 Total de Cargos:",
+      "rolesSize": "```{{roles}} cargos```",
+      "peoples": "🏣 Total de Pessoas:",
+      "peoplesSize": "```👥 {{peoples}} usuários```",
+      "bots": "👾 Total de Bots:"
+    },
+    "avatar":{
+      "download_avatar": "[Baixe aqui!]({{url}})"
+    },
+    "locale": {
+      "set_lang": "<@{{user}}> Caraca, como é bom falar minha língua natal, véi. :flag_br:  ",
+      "language_list": "<@{{user}}> Estes são os locais disponíveis até o momento! ```{{locales}}``` Para ajudar na minha tradução e internacionalização, acesse minha página no GitHub!"
+    },
+    "prefix": {
+      "set_prefix": "Prefixo atualizado, seu novo prefixo é: ` {{prefix}} ` hehe! < 3",
+      "error_prefix": "Something goes whrong when I tried to change your prefix, darling... Try again later!",
+      "same_prefix": "that prefix was already set, darling. :("
+    },
+    "welcome": {
+      "configure": {
+        "edit": "Editar mensagem de boas-vindas",
+        "delete": "Apagar cofigurações (isso é perigoso!)",
+        "edit_prompt": {
+          "typerequest": "<@{{user}}> Digite sua nova mensagem de boas-vindas.",
+          "lessThan": "tá de zueira que vai usar uma mensagem nessa né!? O mínimo são **15** caracteres, chefe!",
+          "higherThan": "que mensagem grande... Manera nisso aí, chapa! O máximo é **1500** caracteres. --''",
+          "success": "gotcha! Sua mensagem tá editadinha e pronta pra usar. :D"
+        },
+        "delete_prompt": {
+          "success": "mensagem deletada com sucesso! Espero que não se arrependa :T"
+        }
+      },
+      "set": "Configurar módulo",
+      "configTitle": "Ooi! Bem-vindo ao menu de configuração de boas-vindas :D",
+      "get": "Mostrar mensagem configurada",
+      "rejectMessageRequest": "Cara, você tem que criar uma mensagem para poder vê-la! Eu hein! >:C",
+      "enable": "Ativar módulo",
+      "disable": "Desativar módulo"
+    },
+    "purge": {
+      "success": "faxina terminada, chefia."
+    },
+    "kick": {
+      "success": "kickado com sucesso, chefia.",
+      "botLowRole": "calma lá, eu não consigo kickar gente com cargo mais alto que eu.",
+      "equalOrHigher": "você não pode kickar alguém com um cargo maior ou igual ao seu. >:C"
+    },
+    "ban": {
+      "success": "banido com sucesso, chefia.",
+      "botLowRole": "calma lá, eu não consigo banir gente com cargo mais alto que eu.",
+      "equalOrHigher": "você não pode banir alguém com um cargo maior ou igual ao seu. >:C"
+    },
+    "autorole": {
+      "deleteRejection": "não posso deletar algo que não existe, só sua inteligência.",
+      "deletedSuccess": "autorole deletada com sucesso. =D",
+      "myselfLowRole": "meu maior cargo está abaixo do cargo selecionado, não posso adiciona-lo à ninguém. =(",
+      "managedError": "esse cargo não pode ser adicionado, ele é trancado pô.",
+      "success": "módulo configurado com sucess, agora é só esperar alguém entrar. =)",
+      "missingRole": "você esqueceu de mencionar o cargo, bonitão. Ex.: `+autorole --create @cargo`",
+      "getInfo": "cargo configurado: {{role}}"
+    },
+    "level": {
+      "summary": "Menu de configuração de níveis =D",
+      "options": {
+        "setup": "Instalar módulo de níveis",
+        "delete": "Desinstalar módulo de níveis",
+        "reset": "Resetar configurações do módulo",
+        "about": "Descrição do módulo"
+      },
+      "setupDialog": {
+        "askConfirm": "Digite 'confirm' confirmar a instalação. Aviso: 10 cargos serão criados após o término.",
+        "confirmSuccess": "Módulo instalado com sucesso. Você pode editar nome, cor, permissões e posição dos cargos de nível contanto que não os delete!",
+        "alreadyInstalled": "O módulo de níveis já está ativado, bobão.",
+        "installCancel": "Instalação cancelada. ;)"
+      },
+      "deleteDialog": {
+        "deleteSuccess": "Módulo deletado com sucesso! =D",
+        "notInstalled": "Vacilão, o módulo não está instalado. Como quer remover algo que nem existe??"
+      }
+    },
+      "help": {
+        "header_1": "Utilize o prefixo {{prefix}} em {{server}} para rodar comandos.",
+        "header_2": "Para mais ajuda com algum comando, utilize: {{helpCommand}}",
+        "header_3": "Por exemplo: {{exampleCommand}}",
+        "definitions": {
+          "usage": "Uso",
+          "aliases": "Alternativas",
+          "pms": "DM's"
+        },
+        "footer": "Para suporte entre em: {{link}}",
+        "footer_group": [
+          "`[]` se refere a argumentos __**opcionais**__ ",
+          "`<>` se refere a argumentos __**obrigatórios**__ ",
+          "Aviso: omita `<>` e `[]` quando realizar um comando."
+      ],
+      "notSet": "Sem descrição disponível.",
+      "checkPMs": "Cheque suas DM's!"
+      },
+    "botMention": "E aí, de boa? =) Se quiser saber, meu prefixo configurado aqui é ``{{prefix}}``",
+    "descriptions": {
+      "aka": "Exibe as últimas 20 atualizações de nome#tag do usuário.",
+      "help": "Exibe este menu ou a ajuda detalhada.",
+      "prefix": "Exibe o prefixo do bot neste servidor.",
+      "invite": "Cria um convite do bot.",
+      "ping": "Exibe a latência do bot.",
+      "serverinfo": "Exibe as informações do servidor",
+      "userinfo": "Exibe as informações de um usuário.",
+      "addroleall": "Adiciona um cargo específico em todos os membros do servidor",
+      "removeroleall": "Remove um cargo específico de todos os membros que o tiverem",
+      "ban": "Bane um usuário.",
+      "kick": "Expulsa um usuário",
+      "purge": "Limpa até 100 mensagens do chat, podendo ser de um membro específico, bots, arquivos e comandos.",
+      "autorole": "Configurações de cargos automáticos dados aos novos membros do servidor.",
+      "level": "Aciona o menu de configuração de níveis do servidor.",
+      "welcome": "Aciona o menu de configuração de boas-vindas.",
+      "locale": "Aciona o menu de linguagens (é por aqui que se muda meu idioma!)."
+    },
+    "definitions": {
+      "aliases": "Alternativas",
+      "usage": "Uso"
+    },
+    "aka": {
+      "title": "Ùltimas atualizações de: {{user}}",
+      "noResults": "Não tenho nada sobre esse tal de {{user}}."
+    },
+    "ttt": {
+      "win": "Temos um vencedor! Parabéns, {{user}}.",
+      "request": "Hey, {{user}} alguém te desafiou à uma partida de `Jogo da Velha`. Vê se não amarela e digita **accept** pra começar logo!",
+      "timeOf": "Vez de: {{user}} \n {{display}}"
+    }
+}
