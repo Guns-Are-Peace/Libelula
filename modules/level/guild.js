@@ -24,7 +24,7 @@ module.exports = class LevelSystem extends Module {
         if (!message.channel.guild) return;
         if (message.author.bot) return;   
         
-        const store = await this.data.guilds.findByPk(message.channel.guild.id);
+        const store = await this.data.fetchGuild(message.channel.guild.id);
 
         if (!store.modules.levelSystem) return;
 

@@ -25,7 +25,6 @@ module.exports = class Ready extends Module {
         const uname = before.username !== after.username ? after.username : before.username;
         const discr = before.discriminator !== after.discriminator ? after.discriminator : before.discriminator;
 
-        console.log(tagArray);
         if (tagArray.length == 10) tagArray.pop();
 
         tagArray.push({ tag: uname + '#' + discr, timestamp: Date.now() });
