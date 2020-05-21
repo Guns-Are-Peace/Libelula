@@ -132,6 +132,14 @@
       "notSet": "Sem descrição disponível.",
       "checkPMs": "Cheque suas DM's!"
       },
+    "rra": {
+      "edited": "Removido de ``{{++success}}/{{memberLength}} ``membros``, erros em ``{{errors}}`` membros",
+      "base": "Remover role de {{membros}}..."
+    },
+    "ara": {
+      "edited": "Adicionando role em ``{{++success}}/{{memberLength}} ``membros``, erros em ``{{errors}}`` membros",
+      "base": "Adicionando role em {{membros}}..."
+    },
     "botMention": "E aí, de boa? =) Se quiser saber, meu prefixo configurado aqui é ``{{prefix}}``",
     "descriptions": {
       "aka": "Exibe as últimas 20 atualizações de nome#tag do usuário.",

@@ -33,10 +33,10 @@ module.exports = class RemoveRoleAll extends Command {
         msg.guild.members.map(member => {
             member.removeRole(role.id, "Command remove role all")
                 .then(() => {
-                    msg_responder.edit(`Removido de \`\`${++success}/${memberLength}\`\` membros, erros em \`\`${error}\`\` membros`)
+                    msg_responder.edit(responder.t("{{rra.edited}}", { success: ++success,  memberLength: memberLength, errors: error }));
                 })
                 .catch(() => {
-                    msg_responder.edit(`Removido de \`\`${success}/${memberLength}\`\` membros, erros em \`\`${++error}\`\` membros`)
+                    msg_responder.edit(responder.t("{{rra.edited}}", { success: ++success,  memberLength: memberLength, errors: ++error }));
                 })
         })
     };
