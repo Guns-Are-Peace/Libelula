@@ -41,7 +41,7 @@
       "bots": "👾 Total de Bots:"
     },
     "avatar":{
-      "download_avatar": "[Baixe aqui!]({{url}})"
+      "title": "🖼️ Avatar de: {{user}}"
     },
     "locale": {
       "set_lang": "<@{{user}}> Caraca, como é bom falar minha língua natal, véi. :flag_br:  ",
@@ -87,13 +87,14 @@
       "equalOrHigher": "você não pode banir alguém com um cargo maior ou igual ao seu. >:C"
     },
     "autorole": {
-      "deleteRejection": "não posso deletar algo que não existe, só sua inteligência.",
+      "deleteRejection": "não posso deletar algo que não está configurado.",
       "deletedSuccess": "autorole deletada com sucesso. =D",
       "myselfLowRole": "meu maior cargo está abaixo do cargo selecionado, não posso adiciona-lo à ninguém. =(",
       "managedError": "esse cargo não pode ser adicionado, ele é trancado pô.",
       "success": "módulo configurado com sucess, agora é só esperar alguém entrar. =)",
       "missingRole": "você esqueceu de mencionar o cargo, bonitão. Ex.: `+autorole --create @cargo`",
-      "getInfo": "cargo configurado: {{role}}"
+      "getInfo": "cargo configurado: {{role}}",
+      "notSet": "o módulo está inativo. Utilize `{{prefix}}autorole create <@role>` para ativar!"
     },
     "level": {
       "summary": "Menu de configuração de níveis =D",
@@ -141,24 +142,6 @@
       "base": "Adicionando role em {{membros}}..."
     },
     "botMention": "E aí, de boa? =) Se quiser saber, meu prefixo configurado aqui é ``{{prefix}}``",
-    "descriptions": {
-      "aka": "Exibe as últimas 20 atualizações de nome#tag do usuário.",
-      "help": "Exibe este menu ou a ajuda detalhada.",
-      "prefix": "Exibe o prefixo do bot neste servidor.",
-      "invite": "Cria um convite do bot.",
-      "ping": "Exibe a latência do bot.",
-      "serverinfo": "Exibe as informações do servidor",
-      "userinfo": "Exibe as informações de um usuário.",
-      "addroleall": "Adiciona um cargo específico em todos os membros do servidor",
-      "removeroleall": "Remove um cargo específico de todos os membros que o tiverem",
-      "ban": "Bane um usuário.",
-      "kick": "Expulsa um usuário",
-      "purge": "Limpa até 100 mensagens do chat, podendo ser de um membro específico, bots, arquivos e comandos.",
-      "autorole": "Configurações de cargos automáticos dados aos novos membros do servidor.",
-      "level": "Aciona o menu de configuração de níveis do servidor.",
-      "welcome": "Aciona o menu de configuração de boas-vindas.",
-      "locale": "Aciona o menu de linguagens (é por aqui que se muda meu idioma!)."
-    },
     "definitions": {
       "aliases": "Alternativas",
       "usage": "Uso"

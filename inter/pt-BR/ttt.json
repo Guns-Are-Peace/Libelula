@@ -1,0 +1,8 @@
+{
+    "rejection_error": "Você não pode desafiar a **mim**, bobinho.",
+    "challenge_request": "Hey hey hey, {{target}}! {{challenger}} desafiou pro jogo da velha. Deseja aceitar?",
+    "challenge_rejected": "{{challenger}} Poxinha, {{target}} recusou seu desafio. = (",
+    "win": "Temos um vencedor! Parabéns, {{user}}.",
+    "request": "Hey, {{user}} alguém te desafiou à uma partida de `Jogo da Velha`. Vê se não amarela e digita **accept** pra começar logo!",
+    "timeOf": "Vez de: {{user}} \n {{display}}"
+}

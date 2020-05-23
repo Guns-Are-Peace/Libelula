@@ -6,23 +6,25 @@ module.exports = class Autorole extends Command {
       name: "autorole",
       aliases: [],
       group: 'modules',
-      options: { localeKey: "commands", adminOnly: false },
+      options: { localeKey: "commands", adminOnly: false, modOnly: true },
       usage: [
-         { name: 'choice', type: 'string', choices: ['--delete', '--create', '--info'], optional: true },
+         { name: 'action', type: 'string', displayName: "delete/create/info" , choices: ['delete', 'create', 'info'], optional: false },
          { name: 'role', type: 'role', optional: true }
              ]
     })
-  }
+  };
+
   async handle({ msg, args, client, store }, responder) {
-    switch (args.choice) {
-      case '--delete': {
+    switch (args.action) {
+      case 'delete': {
 
         if (store.modules.autorole == null) return responder.error('{{autorole.deleteRejection}}');
 
-        await store.uptate({ 'modules.autorole': null });
-        return responder.send('{{autorole.deletedSuccess}}');
+        await store.update({ 'modules.autorole': null });
+        await store.cache().save();
+        return responder.success(responder.t('{{autorole.deletedSuccess}}'));
       };
-      case '--create': {
+      case 'create': {
         
         if (!args.role) return responder.error(responder.t('{{autorole.missingRole}}'));
 
@@ -36,12 +38,12 @@ module.exports = class Autorole extends Command {
         
         await store.update({'modules.autorole': role.id });
 
-        await store.save();
+        await store.cache().save();
 
         return responder.success(responder.t('{{autorole.success}}'));
 
       };
-      case '--info': {
+      case 'info': {
         console.log(store);
         if (store.modules.autorole == null) return responder.send('{{autorole.notSet}}');
         else return responder.format('emoji:info').send('{{autorole.getInfo}}', { role: `<@&${store.modules.autorole}>` });

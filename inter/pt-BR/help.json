@@ -1,0 +1,38 @@
+{
+    "descriptions": {
+        "avatar": "Exibe o avatar do membro selecionado. Caso não haja, é exibido o avatar do autor da mensagem.",
+        "aka": "Exibe as últimas 20 atualizações de nome#tag do usuário.",
+        "help": "Exibe este menu ou a ajuda detalhada.",
+        "prefix": "Exibe o prefixo do bot neste servidor.",
+        "invite": "Cria um convite do bot.",
+        "ping": "Exibe a latência do bot.",
+        "serverinfo": "Exibe as informações do servidor",
+        "userinfo": "Exibe as informações de um usuário.",
+        "addroleall": "Adiciona um cargo específico em todos os membros do servidor",
+        "removeroleall": "Remove um cargo específico de todos os membros que o tiverem",
+        "ban": "Bane um usuário.",
+        "kick": "Expulsa um usuário.",
+        "ttt": "Convide um usuário para jogar o famoso jogo-da-velha!",
+        "purge": "Limpa até 100 mensagens do chat, podendo ser de um membro específico, bots, arquivos e comandos.",
+        "autorole": "Configurações de cargos automáticos dados aos novos membros do servidor.",
+        "level": "Aciona o menu de configuração de níveis do servidor.",
+        "welcome": "Aciona o menu de configuração de boas-vindas.",
+        "locale": "Aciona o menu de linguagens (é por aqui que se muda meu idioma!)."
+    },
+    "header_1": "Utilize o prefixo {{prefix}} em {{server}} para rodar comandos.",
+    "header_2": "Para mais ajuda com algum comando, utilize: {{helpCommand}}",
+    "header_3": "Por exemplo: {{exampleCommand}}",
+    "definitions": {
+      "usage": "Uso",
+      "aliases": "Alternativas",
+      "pms": "DM's"
+    },
+    "footer": "Para suporte entre em: {{link}}",
+    "footer_group": [
+      "`[]` se refere a argumentos __**opcionais**__ ",
+      "`<>` se refere a argumentos __**obrigatórios**__ ",
+      "Aviso: omita `<>` e `[]` quando realizar um comando."
+    ],
+    "notSet": "Sem descrição disponível.",
+    "checkPMs": "Cheque suas DM's!"
+}

@@ -9,7 +9,7 @@ module.exports = {
         msg.author.username + ': ' +
         msg.cleanContent.replace(/\n/g, ' ')
       )
-      return Promise.resolve(container)
+      return Promise.resolve(container);
     }
   }
   

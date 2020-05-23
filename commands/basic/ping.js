@@ -16,6 +16,6 @@ module.exports = class PingCommand extends Command {
     }
 
     async handle({ msg }, responder) {
-        return responder.reply(`${msg.channel.guild.shard.latency} ms`)
+        return responder.success(`${msg.channel.guild.shard.latency} ms.`)
     }
 }

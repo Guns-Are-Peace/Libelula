@@ -9,7 +9,8 @@ global.include = file => require(join(__dirname, file));
 const client = new Bucket({
 	token: process.env.TOKEN,
 	modules: './modules',
-	admins: ['694538239507300463', '268351613771448320']
+	admins: ['694538239507300463', '268351613771448320'],
+	prefix: '-'
 });
 
 const resolve = dir => join(dir);

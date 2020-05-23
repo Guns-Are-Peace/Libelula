@@ -5,6 +5,7 @@ module.exports = class Avatar extends Command {
   constructor(...args) {
     super(...args, {
       name: "aka",
+      group: 'info',
       aliases: ["inspect"],
       options: { localeKey: "commands", adminOnly: false },
       usage: [

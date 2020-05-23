@@ -6,19 +6,40 @@ module.exports = class Avatar extends Command {
     super(...args, {
       name: 'ttt',
       group: 'games',
-      options: { localeKey: "commands", adminOnly: false },
+      options: { localeKey: "ttt", adminOnly: false },
       usage: [
-          { name: 'user', displayName: '@user', type: 'member' }
+          { name: 'user', displayName: '@user', type: 'member', optional: false }
       ]
     })
   }
   async handle({ msg, args }, responder) {
 
-    let responses = await msg.channel.awaitMessages(m => m.content === "yes", { time: 10000, maxMatches: 1 });
-    responses.on('reacted', (reacted) => { console.log(reacted) });
+    if (args.user[0].id === this._client.user.id) return responder.error("{{rejection_error}}");
+    if (args.user[0].ttt == true) return responder.error("{{rejection_inGame}}");
+    if (msg.member.ttt == true) return responder.error("{{rejection_inGameAuthor}}");
+
+
+    responder.send("{{challenge_request}}", { target: args.user[0].mention, challenger: `**${msg.author.username}**` }).then(async m => {
+      await this._client.addMessageReaction(m.channel.id, m.id, '✅');
+      await this._client.addMessageReaction(m.channel.id, m.id, '❎');
+
+      const reactionHandler = new Reactor.continuousReactionStream(m, (userID) => userID === msg.author.id, true, { maxMatches: 1, time: 18000000 });
+      reactionHandler.on('reacted', (r) => {
+
+        if (r.emoji.name !== "✅") return m.edit({ content: responder.t('{{challenge_rejected}}', { target: args.user[0].mention, challenger: `**${msg.author.username}**` } )});
+
+        this._client.deleteMessage(m.channel.id, m.id, "Jasper's ttt game :D");
+        return this.startGame(msg, args, responder);
+      });
+    });
   };
   async startGame(msg, args, responder) {
-    
+
+    // Setting up member's playing status
+
+    msg.member.ttt = true;
+    args.user[0].ttt = true;
+
     let 
     display = `0️⃣ 1️⃣ 2️⃣\n3️⃣ 4️⃣ 5️⃣\n6️⃣ 7️⃣ 8️⃣`,
     board = ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
@@ -30,7 +51,7 @@ module.exports = class Avatar extends Command {
     this.reactionArr;
     this.count      = 0;
 
-    responder.send(responder.t('{{ttt.timeOf}}', { user: `<@${this.playerList[this.player]}>`, display: display })).then(async msg => {
+    responder.send(responder.t('{{timeOf}}', { user: `<@${this.playerList[this.player]}>`, display: display })).then(async msg => {
       this.refreshReactions(msg, display);
       const reactionHandler = new Reactor.continuousReactionStream(msg, (Auth) => this.playerList.includes(Auth), true, { maxMatches: 9, time: 180000 })
       
@@ -41,8 +62,7 @@ module.exports = class Avatar extends Command {
         await this.markPosition(board, marks, msg, reaction.emoji.name, responder);
 
         if (!this.finish || this.count >= 9)
-          await msg.edit({ content: responder.t('{{ttt.timeOf}}', { user: `<@${this.playerList[this.player]}>`, display: display }) });
-
+          await msg.edit({ content: responder.t('{{timeOf}}', { user: `<@${this.playerList[this.player]}>`, display: display }) });
       });
     });
   };
@@ -54,7 +74,7 @@ module.exports = class Avatar extends Command {
     this.checkWin(board);
 
     if (this.finish == true) {
-        await msg.edit({ content: responder.t('{{ttt.gameWin}}', { user: `<@${this.playerList[this.player]}>` }) })
+        await msg.edit({ content: responder.t('{{gameWin}}', { user: `<@${this.playerList[this.player]}>` }) })
     };
 
     if (!this.finish && this.count >= 9)

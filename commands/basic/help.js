@@ -8,7 +8,7 @@ class HelpMenu extends Command {
       description: 'Displays info on commands',
       aliases: ['h'],
       cooldown: 10,
-      options: { localeKey: 'commands' },
+      options: { localeKey: 'help' },
       usage: [
         { name: 'command', type: 'command', optional: true }
       ],
@@ -66,25 +66,25 @@ class HelpMenu extends Command {
     if (toSend.length) await responder.send(['**```glsl'].concat(toSend, '```**'), { DM: true })
 
     return responder.send([
-      `{{help.header_1}} ${prefix === process.env.CLIENT_PREFIX ? '' : '{{help.reader_1_alt}}'}`,
-      '{{help.header_2}}',
-      '{{help.header_3}}',
-      '{{help.footer}}'
+      `{{header_1}}`,
+      '{{header_2}}',
+      '{{header_3}}',
+      '{{footer}}'
     ], {
       DM: true,
       prefix: `\`${prefix}\``,
       defaultPrefix: `\`@${client.user.username}\``,
-      server: `**${msg.channel.guild ? msg.channel.guild.name : responder.t('{{help.pms}}')}**`,
+      server: `**${msg.channel.guild ? msg.channel.guild.name : responder.t('{{pms}}')}**`,
       helpCommand: `\`${prefix}help <command>\``,
       exampleCommand: `\`${prefix}help credits\``,
       link: '**https://discord.gg/akTbhsa**'
     })
     .then(m => {
       if (msg.channel.guild) {
-        responder.format('emoji:inbox').reply('{{help.checkPMs}}')
+        responder.format('emoji:inbox').reply('{{checkPMs}}')
       };
     });
   };
-}
+};
 
 module.exports = HelpMenu;
