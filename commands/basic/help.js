@@ -76,7 +76,7 @@ class HelpMenu extends Command {
       defaultPrefix: `\`@${client.user.username}\``,
       server: `**${msg.channel.guild ? msg.channel.guild.name : responder.t('{{pms}}')}**`,
       helpCommand: `\`${prefix}help <command>\``,
-      exampleCommand: `\`${prefix}help credits\``,
+      exampleCommand: `\`${prefix}help avatar\``,
       link: '**https://discord.gg/akTbhsa**'
     })
     .then(m => {

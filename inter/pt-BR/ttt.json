@@ -4,5 +4,8 @@
     "challenge_rejected": "{{challenger}} Poxinha, {{target}} recusou seu desafio. = (",
     "win": "Temos um vencedor! Parabéns, {{user}}.",
     "request": "Hey, {{user}} alguém te desafiou à uma partida de `Jogo da Velha`. Vê se não amarela e digita **accept** pra começar logo!",
-    "timeOf": "Vez de: {{user}} \n {{display}}"
+    "timeOf": "Vez de: {{user}} \n {{display}}",
+    "gameWin": "{{winner}} venceu! Quem vai desafiar o campeão!?",
+    "rejection_inGameAuthor": "Colegão, você já está em jogo! Se toca.",
+    "rejection_inGame": "Bom... A pessoa que você chamou já está jogando. = ("
 }

@@ -41,7 +41,7 @@ module.exports = class Avatar extends Command {
     args.user[0].ttt = true;
 
     let 
-    display = `0️⃣ 1️⃣ 2️⃣\n3️⃣ 4️⃣ 5️⃣\n6️⃣ 7️⃣ 8️⃣`,
+    display = `↖️ ⬆️ ↗️\n⬅️ ⏺️ ➡️\n↙️ ⬇️ ↘️`,
     board = ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
     marks = ['⭕', '❌'];
 
@@ -73,13 +73,20 @@ module.exports = class Avatar extends Command {
     
     this.checkWin(board);
 
-    if (this.finish == true) {
+    if (this.finish == true) 
+    {
+      delete msg.member.ttt;
+      delete args.user[0].ttt;
         await msg.edit({ content: responder.t('{{gameWin}}', { user: `<@${this.playerList[this.player]}>` }) })
     };
 
     if (!this.finish && this.count >= 9)
+    {
+      delete msg.member.ttt;
+      delete args.user[0].ttt;
       return msg.edit({ content: "velha!" });
-    
+    };
+
     if (this.player == 0) 
       return this.player = 1;
     else 
