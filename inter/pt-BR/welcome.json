@@ -1,0 +1,21 @@
+{
+    "configure": {
+        "edit": "Editar mensagem de boas-vindas",
+        "delete": "Apagar cofigurações (isso é perigoso!)",
+        "edit_prompt": {
+          "typerequest": "<@{{user}}> Digite sua nova mensagem de boas-vindas.",
+          "lessThan": "tá de zueira que vai usar uma mensagem nessa né!? O mínimo são **15** caracteres, chefe!",
+          "higherThan": "que mensagem grande... Manera nisso aí, chapa! O máximo é **1500** caracteres. --''",
+          "success": "gotcha! Sua mensagem tá editadinha e pronta pra usar. :D"
+        },
+        "delete_prompt": {
+          "success": "mensagem deletada com sucesso! Espero que não se arrependa :T"
+        }
+      },
+      "set": "Configurar módulo",
+      "configTitle": "Ooi! Bem-vindo ao menu de configuração de boas-vindas :D",
+      "get": "Mostrar mensagem configurada",
+      "rejectMessageRequest": "Cara, você tem que criar uma mensagem para poder vê-la! Eu hein! >:C",
+      "enable": "Ativar módulo",
+      "disable": "Desativar módulo"
+}

@@ -1,0 +1,4 @@
+{
+    "edited": "Adicionando role em ``{{++success}}/{{memberLength}} ``membros``, erros em ``{{errors}}`` membros",
+    "base": "Adicionando role em {{membros}}..."
+}

@@ -1,0 +1,22 @@
+{
+    "summary": "Menu de configuração de níveis =D",
+    "options": 
+    {
+      "setup": "Instalar módulo de níveis",
+      "delete": "Desinstalar módulo de níveis",
+      "reset": "Resetar configurações do módulo",
+      "about": "Descrição do módulo"
+    },
+    "setupDialog": 
+    {
+        "askConfirm": "Digite 'confirm' confirmar a instalação. Aviso: 10 cargos serão criados após o término.",
+        "confirmSuccess": "Módulo instalado com sucesso. Você pode editar nome, cor, permissões e posição dos cargos de nível contanto que não os delete!",
+        "alreadyInstalled": "O módulo de níveis já está ativado, bobão.",
+        "installCancel": "Instalação cancelada. ;)"
+    },
+      "deleteDialog": 
+    {
+        "deleteSuccess": "Módulo deletado com sucesso! =D",
+        "notInstalled": "Vacilão, o módulo não está instalado. Como quer remover algo que nem existe??"
+    }
+}

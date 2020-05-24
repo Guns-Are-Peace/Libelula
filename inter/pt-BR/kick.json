@@ -1,0 +1,6 @@
+{
+    "success": "kickado com sucesso, chefia.",
+    "botLowRole": "calma lá, eu não consigo kickar gente com cargo mais alto que eu.",
+    "reasonNotSet": "Motivo não especificado.",
+    "equalOrHigher": "você não pode kickar alguém com um cargo maior ou igual ao seu. >:C"
+}

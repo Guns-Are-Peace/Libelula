@@ -1,0 +1,5 @@
+{
+    "set_prefix": "Prefixo atualizado, seu novo prefixo é: ` {{prefix}} ` hehe! < 3",
+    "error_prefix": "Something goes whrong when I tried to change your prefix, darling... Try again later!",
+    "same_prefix": "that prefix was already set, darling. :("
+}

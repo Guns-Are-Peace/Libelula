@@ -1,0 +1,10 @@
+{
+    "deleteRejection": "não posso deletar algo que não está configurado.",
+    "deletedSuccess": "autorole deletada com sucesso. =D",
+    "myselfLowRole": "meu maior cargo está abaixo do cargo selecionado, não posso adiciona-lo à ninguém. =(",
+    "managedError": "esse cargo não pode ser adicionado, ele é trancado pô.",
+    "success": "módulo configurado com sucess, agora é só esperar alguém entrar. =)",
+    "missingRole": "você esqueceu de mencionar o cargo, bonitão. Ex.: `+autorole --create @cargo`",
+    "getInfo": "cargo configurado: {{role}}",
+    "notSet": "o módulo está inativo. Utilize `{{prefix}}autorole create <@role>` para ativar!"
+}

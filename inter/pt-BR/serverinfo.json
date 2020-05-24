@@ -1,0 +1,23 @@
+{
+    "id": "🔰 ID do servidor",
+    "owner": "Chefe do Servidor",
+    "locale": "⚽ Região",
+    "ownerID": "ID do Dono",
+    "days": "**```{{days}} dias```**",
+    "createDate": ":date: Servidor criado em: ",
+    "createTime": "⏰ Servidor criado há",
+    "channelVoice": "🎤 Canais de Voz:",
+    "channelVoiceSize":"```{{channels}} canal(is) de voz```",
+   "channelText": "📋 Canais de texto:",
+    "channelTextSize": "```{{channels}} canal(is) de texto```",
+    "botAddDate": "📥 Bot adicionado em",
+    "botAddTime": "📥 Bot adicionado há",
+    "members": "🎎 Total de Membros",
+    "membersSize": "```{{members}} membros no servidor```",
+    "roles": "📌 Total de Cargos:",
+    "rolesSize": "```{{roles}} cargos```",
+    "peoples": "🏣 Total de Pessoas:",
+    "peoplesSize": "```👥 {{peoples}} usuários```",
+    "bots": "👾 Total de Bots:"
+
+}

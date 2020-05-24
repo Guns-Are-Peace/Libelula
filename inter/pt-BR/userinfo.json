@@ -1,0 +1,17 @@
+{
+    "title": "Informações de usuário",
+    "gamming": "Jogando",
+    "nickname": "Apelido",
+    "entry_server": "Entrou no server há: ",
+    "day_entry": "``{{days}} dias``",
+    "create_account": "Conta criada há: ",
+    "roles": "cargos [{{length}}]",
+    "permissions": "Permissões no servidor [{{length}}]",
+    "clientStatus": "Usuário logado no:",
+    "status": {
+      "online": ":online: ativo",
+      "idle": ":idle: ausente",
+      "dnd": ":dnd: não incomodar",
+      "offline": ":offline: desconectado/invisivel"
+    }
+}
