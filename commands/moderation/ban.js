@@ -10,7 +10,7 @@ module.exports = class Ban extends Command {
             description: 'Ban a user',
             options: {
                 guildOnly: true,
-                localeKey: "commands",
+                localeKey: "ban",
                 permissions: ['banMembers']
             },
             usage: [{
@@ -39,12 +39,12 @@ module.exports = class Ban extends Command {
         const bothighestRole = member.highestRole.position < userBot.highestRole.position
 
         if (!punisherhighestRole)
-            return responder.error(responder.t('{{ban.equalOrHigher}}'));
+            return responder.error(responder.t('{{equalOrHigher}}'));
         if (!bothighestRole)
-            return responder.error('{{ban.botLowRole}}');
+            return responder.error('{{botLowRole}}');
         
         member.ban(null, reason)
-            .then(() => responder.success(responder.t('{{ban.success}}')))
-            .catch(() => responder.error('ban.unexpectedRejection'));
+            .then(() => responder.success(responder.t('{{success}}')))
+            .catch(() => responder.error('unexpectedRejection'));
     };
 };

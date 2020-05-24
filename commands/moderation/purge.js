@@ -17,7 +17,7 @@ module.exports = class Purge extends Command {
           unique: true
         }
       ],
-      options: { guildOnly: true, modOnly: true, localeKey: 'commands' },
+      options: { guildOnly: true, modOnly: true, localeKey: 'purge' },
       group: 'moderation'
     })
   }
@@ -57,7 +57,7 @@ module.exports = class Purge extends Command {
         : msg.channel.purge(args.amount)
       )
 
-      return responder.success(responder.t('{{purge.success}}'));
+      return responder.success(responder.t('{{success}}'));
 
     } catch (err) {
       this.logger.error(

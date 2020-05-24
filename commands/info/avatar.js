@@ -9,7 +9,7 @@ module.exports = class InviteCommand extends Command {
             cooldown: 5,
             options: {
                 guildOnly: true,
-                localeKey: "commands"
+                localeKey: "avatar"
             },
             usage: [
                 {
@@ -26,7 +26,7 @@ module.exports = class InviteCommand extends Command {
         const target = args.user ? args.user[0] : msg.member;
         const embed  = new client.embed
         embed
-        .title(responder.t("{{avatar.title}}", { user: target.user.username  }))    
+        .title(responder.t("{{title}}", { user: target.user.username  }))    
         .color(11220318)
         .image(target.user.dynamicAvatarURL(null, 512))
         .footer(`${msg.author.username}#${msg.author.discriminator}`, msg.author.avatarURL)

@@ -7,7 +7,7 @@ module.exports = class Avatar extends Command {
       name: "aka",
       group: 'info',
       aliases: ["inspect"],
-      options: { localeKey: "commands", adminOnly: false },
+      options: { localeKey: "aka", adminOnly: false },
       usage: [
           { name: 'user', displayName: '@user', type: 'member', optional: true }
       ]
@@ -19,14 +19,14 @@ module.exports = class Avatar extends Command {
     const target    = await data.users.findByPk(user.id) || null;
 
     if (!target || target.profile.aka.length == 0)
-        return responder.format('emoji:mailbox').send(responder.t('{{aka.noResults}}', { user: user.username ? user.username : user.user.username }));
+        return responder.format('emoji:mailbox').send(responder.t('{{noResults}}', { user: user.username ? user.username : user.user.username }));
     
     const e       = new client.embed;
     const fetched = target.profile.aka;
     const result  = fetched.map(obj => `**${obj.tag}** - ${moment(obj.timestamp).format('llll')}`);
 
         return responder.embed(
-            e.title(responder.t("{{aka.title}}", { user: user.username ? `${user.username}#${user.discriminator}` : `${user.user.username}#${user.user.discriminator}` })),
+            e.title(responder.t("{{title}}", { user: user.username ? `${user.username}#${user.discriminator}` : `${user.user.username}#${user.user.discriminator}` })),
             e.description(result.join(`\n`),
             )
         ).send();

@@ -8,10 +8,9 @@ module.exports = class ServerInfoCommand extends Command {
             group: 'info',
             aliases: ['server', 'sv'],
             cooldown: 5,
-            description: 'View ping bot',
             options: {
                 guildOnly: true,
-                localeKey: "commands"
+                localeKey: "serverinfo"
             },
             usage: []
         });

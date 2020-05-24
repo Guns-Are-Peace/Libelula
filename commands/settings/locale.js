@@ -20,7 +20,7 @@ module.exports = class Avatar extends Command {
     store.cache().save()
       .then(() => {
         responder.settings.lang = lang[0];
-        responder.send(responder.t("{{locale.set_lang}}", {
+        responder.send(responder.t("{{set_lang}}", {
           user: msg.author.id
         }))
       });

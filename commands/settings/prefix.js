@@ -6,16 +6,16 @@ module.exports = class Prefix extends Command {
             name: "prefix",
             aliases: ["setprefix"],
             group: 'settings',
-            options: { localeKey: "commands" },
+            options: { localeKey: "prefix" },
             usage: [{ name: 'prefix', type: 'string', max: 3, min: 1, optional: false }]
         })
     }
     async handle({ args, store }, responder) {
         if (args.prefix === store.settings.prefix)
-            return responder.error(responder.t("{{prefix.same_prefix}}"));
+            return responder.error(responder.t("{{same_prefix}}"));
         store.cache().update({ "settings.prefix": args.prefix });
         await store.cache().save().then(() => {
-            return responder.send(responder.t("{{prefix.set_prefix}}", {
+            return responder.send(responder.t("{{set_prefix}}", {
                 prefix: args.prefix
             }));
         });

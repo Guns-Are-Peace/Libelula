@@ -10,7 +10,7 @@ module.exports = class RemoveRoleAll extends Command {
             description: 'Remove a single role from all the server members.',
             options: {
                 guildOnly: true,
-                localeKey: "commands",
+                localeKey: "rra",
                 permissions: ['manageRoles']
             },
             usage: [{
@@ -33,10 +33,10 @@ module.exports = class RemoveRoleAll extends Command {
         msg.guild.members.map(member => {
             member.removeRole(role.id, "Command remove role all")
                 .then(() => {
-                    msg_responder.edit(responder.t("{{rra.edited}}", { success: ++success,  memberLength: memberLength, errors: error }));
+                    msg_responder.edit(responder.t("{{edited}}", { success: ++success,  memberLength: memberLength, errors: error }));
                 })
                 .catch(() => {
-                    msg_responder.edit(responder.t("{{rra.edited}}", { success: ++success,  memberLength: memberLength, errors: ++error }));
+                    msg_responder.edit(responder.t("{{edited}}", { success: ++success,  memberLength: memberLength, errors: ++error }));
                 })
         })
     };

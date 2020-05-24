@@ -10,7 +10,7 @@ module.exports = class Kick extends Command {
             description: 'Kick a user',
             options: {
                 guildOnly: true,
-                localeKey: 'commands',
+                localeKey: 'kick',
                 permissions: ['kickMembers']
             },
             usage: [{
@@ -39,12 +39,12 @@ module.exports = class Kick extends Command {
         const bothighestRole = member.highestRole.position < userBot.highestRole.position
 
         if (!punisherhighestRole)
-            return responder.error(responder.t('{{kick.equalOrHigher}}'));
+            return responder.error(responder.t('{{equalOrHigher}}'));
         if (!bothighestRole)
-            return responder.error(responder.t("{{kick.botLowRole}}"));
+            return responder.error(responder.t("{{botLowRole}}"));
 
         member.kick(reason)
-            .then(() => responder.success('{{kick.success}}'))
-            .catch(() => responder.error('{{kick.unexpectedRejection}}'));
+            .then(() => responder.success('{{success}}'))
+            .catch(() => responder.error('{{unexpectedRejection}}'));
     };
 };

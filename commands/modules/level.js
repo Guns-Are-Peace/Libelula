@@ -19,7 +19,7 @@ module.exports = class Avatar extends Command {
       if (typeof store.modules.levelSystem == Object) return responder.error('{{alreadyInstalled}}');
       responder.format("emoji:floppy_disk").dialog(
       [{ 
-      prompt:responder.t("{{level.setupDialog.askConfirm}}"),
+      prompt:responder.t("{{setupDialog.askConfirm}}"),
       input: {type: "string", name: "option", choices: ['confirm', 'cancel']}}
       ])
       .then(async args => {
@@ -36,20 +36,20 @@ module.exports = class Avatar extends Command {
         };
         store.update({ "modules.levelSystem": { roles: roles, members: {}, message: "Congratulations {{user}}! You're now on level {{level}}" }});
         await store.cache().save();
-        return responder.success("{{level.setupDialog.confirmSuccess}}");
+        return responder.success("{{setupDialog.confirmSuccess}}");
         } else {
-        return responder.success("{{level.setupDialog.InstallCancel}}");
+        return responder.success("{{setupDialog.InstallCancel}}");
         }
       });
   };
   delete ({ msg, client, store }, responder) {
-    if (!store.modules.levelSystem) return responder.error('{{level.deleteDialog.notInstalled}}');
+    if (!store.modules.levelSystem) return responder.error('{{deleteDialog.notInstalled}}');
     try {
       let toUpdate = store.modules;
       delete toUpdate.levelSystem;
       store.update({ "modules": toUpdate });
       store.cache().save().then(() => {
-        responder.success('{{level.deleteDialog.deleteSuccess}}');
+        responder.success('{{deleteDialog.deleteSuccess}}');
       });
     } catch {
       client.logger.error(`Não pude deletar o módulo de níveis em ${msg.channel.guild.name} (${msg.channel.guild.id})`);

@@ -11,7 +11,7 @@ module.exports = class UserInfoCommand extends Command {
             description: 'View ping bot',
             options: {
                 guildOnly: true,
-                localeKey: "commands"
+                localeKey: "whois"
             },
             usage: [{
                 name: 'member',
@@ -34,12 +34,12 @@ module.exports = class UserInfoCommand extends Command {
 
         const embed = new client.embed
         embed
-            .title(responder.t('{{whois.title}}'))
+            .title(responder.t('{{title}}'))
 
             /** 
               *field `user status` @online @idle @dnd @offline
               */
-            .field('Status', responder.t(`{{whois.status.${user.status}}}`), true)
+            .field('Status', responder.t(`{{status.${user.status}}}`), true)
 
             .field('Mention', user.mention, true)
             .field('ID', user.id, true)
@@ -47,34 +47,34 @@ module.exports = class UserInfoCommand extends Command {
             /** 
              *field `user client status` @mobile @web @desktop
              */
-            .field(responder.t('{{whois.clientStatus}}'),
+            .field(responder.t('{{clientStatus}}'),
                 `\`\`\`Markdown\n# ${clientStatus ? clientStatus.map((r) => r[0]).join(" ") : "None"}\`\`\``, true)
 
             /** 
              *field `user playing` @playing or @none
              */
 
-            .field(responder.t('{{whois.gamming}}'),
+            .field(responder.t('{{gamming}}'),
                 `\`\`\`Markdown\n# ${user.game ? user.game.name : "none"}\`\`\``, true)
 
             /** 
              *field `user days entry server`
              */
-            .field(responder.t('{{whois.entry_server}}'), responder.t('{{whois.day_entry}}', {
+            .field(responder.t('{{entry_server}}'), responder.t('{{day_entry}}', {
                 days: moment().diff(user.joinedAt, "days") || "0"
             }), true)
 
             /** 
              *field `user days create account`
              */
-            .field(responder.t('{{whois.create_account}}'), responder.t('{{whois.day_entry}}', {
+            .field(responder.t('{{create_account}}'), responder.t('{{day_entry}}', {
                 days: moment().diff(user.createdAt, "days") || "0"
             }), true)
 
             /** 
              *field `user roles in server`
              */
-            .field(responder.t('{{whois.roles}}', { length: user.roles.length || "0" }),
+            .field(responder.t('{{roles}}', { length: user.roles.length || "0" }),
                 rolesOrder.map(r => `<@&${r.id}>`).join(', ') || "None", true)
 
             /** 
@@ -88,12 +88,12 @@ module.exports = class UserInfoCommand extends Command {
         /** 
          *field `user nickname` case you have nickname
          */
-        if (user.nick) embed.field(responder.t('{{whois.nickname}}'), user.nick, true)
+        if (user.nick) embed.field(responder.t('{{nickname}}'), user.nick, true)
 
         /** 
          *field `list permissions user in server`
          */
-        embed.field(responder.t('{{whois.permissions}}', { length: permission.length || "0" }),
+        embed.field(responder.t('{{permissions}}', { length: permission.length || "0" }),
             `\`\`\`CSS\n${permission.map(r => r[0]).join(" | ")}\`\`\``, false)
 
         return responder.embed(embed).send().catch(this.logger.error)
